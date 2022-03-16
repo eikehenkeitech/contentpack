@@ -17,9 +17,5 @@
         "psr-4": {
             "Itechnology\\Contentpack\\Tests\\": "Tests"
         }
-    },
-    "replace": {
-        "itechnology/contentpack": "self.version",
-        "typo3-ter/contentpack": "self.version"
     }
 }
