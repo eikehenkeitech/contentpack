@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section id="c{data.uid}" class="ce-text-image-left ce-layout-{data.layout}">
+
+    <div class="catBoxElementDetakta itechnology-content-element">
+
+
+        <f:if condition="{files.0.properties.link}">
+            <f:then>
+                <f:link.typolink parameter="{files.0.properties.link}">
+                    <div class="row-m0">
+                        <div class="">
+                            <div class="image-container">
+                                <f:if condition="{files.0}">
+                                    <figure class="rounded" >
+                                        <f:image image="{files.0}" maxWidth="600" alt="{files.0.properties.alt}" title="{files.0.properties.title}" class="bg-white"/>
+                                        <f:if condition="{files.0.properties.description}">
+					<figcaption><f:format.raw>{files.0.properties.description}</f:format.raw></figcaption>
+                                        </f:if>
+                                    </figure>
+                                </f:if>
+                            </div>
+
+                        </div>
+                        <div class="pl-2 m-auto">
+                            <div class="w-100 h-100 d-flex justify-content-center align-items-center text-catbox-title-{data.layout} catBoxElementDetakta-headline d-block m-auto text-wrap">
+				    {files.0.properties.title-> f:format.raw()}
+                            </div>
+                        </div>
+
+                    </div>
+                </f:link.typolink>
+            </f:then>
+        </f:if>
+    </div>
+    <f:if condition="{data.slidenumber}>=0">
+
+        <script>
+/*
+        $('#c{data.uid}').hover(
+            function () {
+                $('#{data.carouseldomid}').carousel({data.slidenumber});
+
+        }
+        );
+*/
+
+
+        slideWithDelay('#c{data.uid}', {data.slidenumber}, '#{data.carouseldomid}');
+
+
+
+
+        </script>
+    </f:if>
+</section>
+</html>

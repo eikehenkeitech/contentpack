@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "de",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "contentpack",
+        "name": "iTechnology Content Pack",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "iTechnology GmbH",
+                "email": "eike.henke@itechnology.de",
+                "name": "Eike Lars Henke",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Itechnology"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2019-10-30 12:10",
+        "extension_builder_version": "9.10.2",
+        "be_user": " (1)"
+    }
+}

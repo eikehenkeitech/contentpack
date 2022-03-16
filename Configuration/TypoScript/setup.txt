@@ -1,0 +1,62 @@
+# Setup TS
+
+# set fluid path
+lib.contentElement {
+    templateRootPaths {
+        200 = EXT:contentpack/Resources/Private/Templates/
+    }
+}
+
+
+
+
+tt_content {
+
+	# rendering definition for custom CE "text image left"
+	text_image_left < lib.contentElement
+	text_image_left {
+		templateName = TextImageLeft
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = image
+			}
+		}
+	}
+
+	# rendering definition for custom CE "text image left"
+	catbox < lib.contentElement
+	catbox {
+		templateName = Catbox
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = image
+			}
+		}
+	}
+# rendering definition for custom CE "text image left"
+	imageonly < lib.contentElement
+	imageonly {
+		templateName = Imageonly
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = image
+			}
+		}
+	}
+# rendering definition for custom CE "text image left"
+	imageonlysimple < lib.contentElement
+	imageonlysimple {
+		templateName = Imageonlysimple
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = image
+			}
+		}
+	}
+
+
+}

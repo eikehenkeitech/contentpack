@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<section id="c{data.uid}" class="ce-text-image-left ce-layout-{data.layout} ">
+
+    <div class="itechnology-content-element ">
+
+
+        <f:if condition="{files.0.properties.link}">
+            <f:then>
+                <f:link.typolink parameter="{files.0.properties.link}">
+                    <div class="row-m0 h-100">
+
+
+                                <f:if condition="{files.0}">
+                                    <figure class="h-100 m-0 w-100">
+                                        <f:image image="{files.0}" maxWidth="600" alt="{files.0.properties.alt}" title="{files.0.properties.title}" class=" {data.addcssclasses} "/>
+                                        <f:if condition="{files.0.properties.description}">
+                                            <figcaption>{files.0.properties.description}</figcaption>
+                                        </f:if>
+                                    </figure>
+                                </f:if>
+
+
+
+
+
+                    </div>
+                </f:link.typolink>
+            </f:then>
+            <f:else>
+                <div class="row-m0 h-100">
+
+
+                            <f:if condition="{files.0}">
+                                <figure class="h-100 m-0 w-100">
+                                    <f:image image="{files.0}" maxWidth="600" alt="{files.0.properties.alt}" title="{files.0.properties.title}" class=" {data.addcssclasses} "/>
+                                    <f:if condition="{files.0.properties.description}">
+                                        <figcaption>{files.0.properties.description}</figcaption>
+                                    </f:if>
+                                </figure>
+                            </f:if>
+
+
+
+
+
+                </div>
+            </f:else>
+        </f:if>
+    </div>
+
+</section>
+</html>

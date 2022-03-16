@@ -1,0 +1,84 @@
+# Custom Content Elements
+
+# Add new content element to "New Content Element Wizard"
+
+
+mod.wizards.newContentElement.wizardItems.itechnology {
+	header = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.content_group.iTechnology
+	elements {
+		text_image_left {
+
+			#  you can also use one of the existent registered icons via iconIdentifier
+			iconIdentifier = content-beside-text-img-left
+			title = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.text_image_left.title
+			description = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.text_image_left.description
+			tt_content_defValues {
+				CType = text_image_left
+			}
+		}
+		catbox {
+
+			#  you can also use one of the existent registered icons via iconIdentifier
+			iconIdentifier = content-beside-text-img-left
+			title = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.text_image_left.title
+			description = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.text_image_left.description
+			tt_content_defValues {
+				CType = catbox
+			}
+		}
+	}
+	show  = *
+
+}
+
+mod.wizards.newContentElement.wizardItems.common {
+	elements {
+		text_image_left {
+
+			#  you can also use one of the existent registered icons via iconIdentifier
+			iconIdentifier = content-beside-text-img-left
+			title = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.text_image_left.title
+			description = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.text_image_left.description
+			tt_content_defValues {
+				CType = text_image_left
+			}
+		}
+		catbox {
+
+			#  you can also use one of the existent registered icons via iconIdentifier
+			iconIdentifier = content-beside-text-img-left
+			title = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.text_image_left.title
+			description = LLL:EXT:contentpack/Resources/Private/Language/locallang_db.xlf:ce.text_image_left.description
+			tt_content_defValues {
+				CType = catbox
+			}
+		}
+	}
+	show := addToList(text_image_left)
+	show := addToList(catbox)
+}
+
+# Define Preview Fluid Templates for Backend Preview
+mod.web_layout.tt_content.preview {
+	#catbox = EXT:contentpack/Resources/Private/Templates/BackendPreview/CatBox.html
+}
+
+# Create a new group and add a (pre-filled) element to it
+mod.wizards.newContentElement.wizardItems.myGroup {
+    header = Advanced Functions
+    elements.customText {
+        iconIdentifier = content-text
+        title = Introductory text for national startpage
+        description = Use this element for all national startpages
+        tt_content_defValues {
+            CType = text
+            bodytext (
+                <h2>Section Header</h2>
+                <p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
+            )
+            header = Section Header
+            header_layout = 100
+        }
+    }
+}
+mod.wizards.newContentElement.wizardItems.myGroup.show = *
