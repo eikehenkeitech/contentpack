@@ -60,3 +60,28 @@ tt_content {
 
 
 }
+
+
+
+tt_content.itech-2cols-with-header-container < lib.contentElement
+tt_content.itech-2cols-with-header-container {
+  templateName = 2ColsWithHeaderItech
+  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates
+  dataProcessing {
+    200 = B13\Container\DataProcessing\ContainerProcessor
+    200 {
+      colPos = 200
+      as = childrenHeader
+    }
+    201 = B13\Container\DataProcessing\ContainerProcessor
+    201 {
+      colPos = 201
+      as = childrenLeft
+    }
+    202 = B13\Container\DataProcessing\ContainerProcessor
+    202 {
+     colPos = 202
+     as = childrenRight
+    }
+  }
+}

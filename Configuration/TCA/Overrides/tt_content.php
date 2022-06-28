@@ -180,4 +180,26 @@ call_user_func(function () {
         'columnsOverrides' => ['bodytext' => ['config' => ['enableRichtext' => true]]]
     ];
 
+
+
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->registerContainer(
+    'itech-2cols-with-header-container',
+    '2 Column Container With Header iTech TEst',
+    'Some Description of the Container',
+    'EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg',
+    [
+        [
+            ['name' => 'header', 'colPos' => 200, 'colspan' => 2, 'allowed' => ['CType' => 'header, textmedia']]
+        ],
+        [
+            ['name' => 'left side', 'colPos' => 201],
+            ['name' => 'right side', 'colPos' => 202]
+        ]
+    ]
+);
+
+$GLOBALS['TCA']['tt_content']['types']['itech-2cols-with-header-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+
+
 });
