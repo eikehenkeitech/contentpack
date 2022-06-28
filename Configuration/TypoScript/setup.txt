@@ -63,6 +63,7 @@ tt_content {
 
 
 # Vertsion 1.0.4
+# Warum nicht da?
 tt_content.itech-2cols-with-header-container < lib.contentElement
 tt_content.itech-2cols-with-header-container {
   templateName = 2ColsWithHeaderItech
