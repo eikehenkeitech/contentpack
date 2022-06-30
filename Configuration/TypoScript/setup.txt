@@ -61,28 +61,167 @@ tt_content {
 
 }
 
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-2cols-with-header-container < lib.contentElement
+tt_content.b13-2cols-with-header-container {
+	templateName = 2ColsWithHeader
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
 
-# Vertsion 1.0.4
-# Warum nicht da?
-tt_content.itech-2cols-with-header-container < lib.contentElement
-tt_content.itech-2cols-with-header-container {
-  templateName = 2ColsWithHeaderItech
-  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates
-  dataProcessing {
-    200 = B13\Container\DataProcessing\ContainerProcessor
-    200 {
-      colPos = 200
-      as = childrenHeader
-    }
-    201 = B13\Container\DataProcessing\ContainerProcessor
-    201 {
-      colPos = 201
-      as = childrenLeft
-    }
-    202 = B13\Container\DataProcessing\ContainerProcessor
-    202 {
-     colPos = 202
-     as = childrenRight
-    }
-  }
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.b13-2cols-with-header-container-2 < lib.contentElement
+tt_content.b13-2cols-with-header-container-2 {
+	templateName = ContentForBs4Container
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 27
+tt_content.content-for-bs4-container < lib.contentElement
+tt_content.content-for-bs4-container {
+	templateName = ContentForBs4Container
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 8
+tt_content.row-with-4-cols < lib.contentElement
+tt_content.row-with-4-cols {
+	templateName = ReiheMit4Spalten
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 20
+// Name war falsch
+tt_content.header-row-with-3-cols < lib.contentElement
+tt_content.header-row-with-3-cols {
+	templateName = HeaderReiheMit3Spalten
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 3
+tt_content.content-hidden-on-phone < lib.contentElement
+tt_content.content-hidden-on-phone {
+	templateName = ContentHiddenOnPhone
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 4
+tt_content.content-visible-on-phone < lib.contentElement
+tt_content.content-visible-on-phone {
+	templateName = ContentVisibleOnPhone
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 5
+tt_content.images-with-rounded-corners < lib.contentElement
+tt_content.images-with-rounded-corners {
+	templateName = ImagesWithRoundedCorners
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 13
+tt_content.content-align-center < lib.contentElement
+tt_content.content-align-center {
+	templateName = ContentAlignCenter
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 19
+tt_content.content-reihe-2-spalten-7-5 < lib.contentElement
+tt_content.content-reihe-2-spalten-7-5 {
+	templateName = ContentReiheMit2Spalten-7-5
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 14
+tt_content.content-reihe-2-spalten-5-7 < lib.contentElement
+tt_content.content-reihe-2-spalten-5-7 {
+	templateName = ContentReiheMit2Spalten-5-7
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 18
+tt_content.content-reihe-2-spalten-6-6-reverse < lib.contentElement
+tt_content.content-reihe-2-spalten-6-6-reverse {
+	templateName = ContentReiheMit2Spalten-6-6-Reverse
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
+}
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+// Source Id 18
+tt_content.content-reihe-3-spalten-3-6-3 < lib.contentElement
+tt_content.content-reihe-3-spalten-3-6-3 {
+	templateName = ContentReiheMit3Spalten-3-6-3
+	templateRootPaths {
+		10 = EXT:contentpack/Resources/Private/Templates
+	}
+	dataProcessing {
+		100 = B13\Container\DataProcessing\ContainerProcessor
+	}
 }

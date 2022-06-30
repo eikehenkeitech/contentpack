@@ -134,7 +134,7 @@ call_user_func(function () {
 				header,
 			--div--;' . $frontendLanguageFilePrefix . 'tabs.images,
 				image,
-				--div--;iTechnology Catbox,
+				--div--;iTechnology Catbox (+),
 				slidenumber,carouseldomid,
 				--div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
@@ -182,24 +182,234 @@ call_user_func(function () {
 
 
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->registerContainer(
-    'itech-2cols-with-header-container',
-    '2 Column Container With Header iTech TEst',
-    'Some Description of the Container',
-    'EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg',
-    [
-        [
-            ['name' => 'header', 'colPos' => 200, 'colspan' => 2, 'allowed' => ['CType' => 'header, textmedia']]
-        ],
-        [
-            ['name' => 'left side', 'colPos' => 201],
-            ['name' => 'right side', 'colPos' => 202]
-        ]
-    ]
-);
-
-$GLOBALS['TCA']['tt_content']['types']['itech-2cols-with-header-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
 
 
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'content-for-bs4-container', // CType
+            'Content for BS4 Container (+)', // label
+            'BS4 Inhalte in einem Container platzieren', // description
+            [
+                [
+                    ['name' => 'Content for BS4 Container (+)', 'colPos' => 200]
+                ]
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'row-with-4-cols', // CType
+            'Reihe mit 4 Spalten', // label
+            'Startseiten Anordnung 4 Spalten für Boxen', // description
+            [
+                [
+                    ['name' => 'First Shortcut (+)', 'colPos' => 200],
+                    ['name' => 'Second Shortcut (+)', 'colPos' => 201],
+                    ['name' => 'Third Shortcut (+)', 'colPos' => 202],
+                    ['name' => 'Fourth Shortcut (+)', 'colPos' => 203],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'header-row-with-3-cols', // CType
+            'Reihe 3 Spalten für Heaeder', // label
+            'Header Aufteilung für 3 Spalten', // description
+            [
+                [
+                    ['name' => 'Linke Spalte', 'colPos' => 200],
+                    ['name' => 'Mittlere Spalte', 'colPos' => 201],
+                    ['name' => 'Rechte Spalte', 'colPos' => 202],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'content-hidden-on-phone', // CType
+            'Content wird nicht auf Phone angezeigt', // label
+            'Container der nicht in Phone Größe angezeigt', // description
+            [
+                [
+                    ['name' => 'Content hidden on Phone (+)', 'colPos' => 200],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'content-visible-on-phone', // CType
+            'Content wird nur auf Phone angezeigt', // label
+            'Container der in Phone Größe angezeigt', // description
+            [
+                [
+                    ['name' => 'Content visible on Phone (+)', 'colPos' => 200],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'images-with-rounded-corners', // CType
+            'Bilder abgerunded', // label
+            'Bildelemente mit abgerundeten Ecken', // description
+            [
+                [
+                    ['name' => 'Images with rounded Corners (+)', 'colPos' => 200],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'content-align-center', // CType
+            'Inhalt zentriert', // label
+            'Inhalte wird zentriert angezeigt', // description
+            [
+                [
+                    ['name' => 'Content align center (+)', 'colPos' => 200],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'content-reihe-3-spalten-3-6-3', // CType
+            'Reihe mit 3 Spalten 3/6/3', // label
+            'Reihe mit 3 Spalten in der Verteilung 3 - 6 - 3', // description
+            [
+                [
+                    ['name' => 'Links  / 3 (+)', 'colPos' => 200],
+                    ['name' => 'Mitte  / 6 (+)', 'colPos' => 201],
+                    ['name' => 'Rechts / 3 (+)', 'colPos' => 202],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'content-reihe-2-spalten-7-5', // CType
+            'Reihe mit 2 Spalten 7/5', // label
+            'Reihe mit 2 Spalten in der Verteilung 7 - 5 (-sm) 12-12(xs)', // description
+            [
+                [
+                    ['name' => 'Links  / 7 (+)', 'colPos' => 200],
+                    ['name' => 'Rechts / 5 (+)', 'colPos' => 201],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'content-reihe-2-spalten-6-6-reverse', // CType
+            'Reihe mit 2 Spalten 6/6 Reverse', // label
+            'Reihe mit 2 Spalten in der Verteilung 6-6 Reverse Order (sm)', // description
+            [
+                [
+                    ['name' => 'Links / Oben wenn klein (+)', 'colPos' => 200],
+                    ['name' => 'Rechts / Unten wenn klein (+)', 'colPos' => 201],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'content-reihe-2-spalten-5-7', // CType
+            'Reihe mit 2 Spalten 5/7', // label
+            'Reihe mit 2 Spalten in der Verteilung 5 - 7 (-sm) 12-12(xs)', // description
+            [
+                [
+                    ['name' => 'Links  / 5 (+)', 'colPos' => 200],
+                    ['name' => 'Rechts / 7 (+)', 'colPos' => 201],
+                ]
+
+            ] // grid configuration
+        )
+        )
+            // set an optional icon configuration
+            ->setIcon('EXT:contentpack/Resources/Public/Icons/container.svg')
+    );
+
+
+    /*
+     *
+     * Ersetzt
+     *
+     * 27
+     * 8
+     * 3
+     * 4
+     * 5
+     * 20
+     * 13
+     * 15
+     * 19
+     * 18
+     * 14
+     */
 
 });
